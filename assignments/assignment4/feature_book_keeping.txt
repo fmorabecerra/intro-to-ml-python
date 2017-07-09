@@ -1,0 +1,28 @@
+index --- ticket_id - unique identifier for tickets
+yes ----- agency_name - Agency that issued the ticket
+not now - inspector_name - Name of inspector that issued the ticket
+not now - violator_name - Name of the person/organization that the ticket was issued to
+not now - violation_street_number, violation_street_name, violation_zip_code - Address where the violation occurred
+no ------ mailing_address_str_number, mailing_address_str_name, city, state, zip_code, non_us_str_code, country - Mailing address of the violator
+yes ----- ticket_issued_date - Date and time the ticket was issued
+yes ----- hearing_date - Date and time the violator's hearing was scheduled
+not now - violation_code, violation_description - Type of violation
+no ------ disposition - Judgment and judgement type
+yes ----- fine_amount - Violation fine amount, excluding fees
+yes ----- admin_fee - $20 fee assigned to responsible judgments
+yes ----- state_fee - $10 fee assigned to responsible judgments
+yes ----- late_fee - 10% fee assigned to responsible judgments
+yes ----- discount_amount - discount applied, if any
+yes ----- clean_up_cost - DPW clean-up or graffiti removal cost
+yes ----- judgment_amount - Sum of all fines and fees
+yes ----- grafitti_status - Flag for graffiti violations
+
+### Engineered features ###
+- ticket_issued_date in correct format
+- hearing_date in correct format 
+- Difference between violation date and hearing date
+- Latitude and logitude - use address to match with ticket id then you can attach a lat and logitude coordinates
+- (maybe) does violation address match mailing address?
+
+### Dummy features ###
+- agency_name
